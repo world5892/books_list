@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book list</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: navy;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
+    .delete {
+      text-align: center;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #aaa;
+      font-size: 20px;
+    }
+
+    .container {
+      width: 800px;
+      margin: 0 auto 20px;
+      position: relative;
+      /* text-align: center; */
+    }
+
+    .message {
+      font-size: 16px;
+      padding: 4px;
+      text-align: center;
+      border-radius: 5px;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      top: 50px;
+    }
+
+    .bg-red {
+      background: red;
+    }
+
+    .bg-green {
+      background: green;
+    }
+
+    .input-info {
+      margin: 15px 0;
+    }
+
+    input {
+      display: block;
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #666;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input[type=submit] {
+      background: #777;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    hr {
+      margin: 30px 0;
+      background: black;
+      height: 1.5px;
+      border: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid #777;
+      padding: 5px;
+      text-align: left;
+    }
+
+    #title {
+      width: 30%;
+    }
+
+    #author {
+      width: 30%;
+    }
+
+    #isbn {
+      width: 30%;
+    }
+
+    #delete-book {
+      width: 10%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Add Book</h1>
+
+    <form>
+
+      <div class="input-info">
+        <label for="input-title">Title</label>
+        <input type="text" id="input-title" placeholder="Enter the title...">
+      </div>
+
+      <div class="input-info">
+        <label for="input-author">Author</label>
+        <input type="text" id="input-author" placeholder="Enter the author...">
+      </div>
+
+      <div class="input-info">
+        <label for="input-isbn">ISBN#</label>
+        <input type="text" id="input-isbn" placeholder="Enter the ISBN...">
+      </div>
+
+      <input type="submit" value="Submit">
+
+    </form>
+
+    <hr>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th id="title">Title</th>
+          <th id="author">Author</th>
+          <th id="isbn">ISBN#</th>
+          <th id="#delete-book"></th>
+        </tr>
+      </thead>
+      <tbody id="books">
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
